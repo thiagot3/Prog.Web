@@ -1,0 +1,25 @@
+<div class="conteiner">
+
+  <h2>Perfil de : {{usuario}}</h2>
+  
+  <div class="w3-section">
+    <a href=card-perfil.component.ts class="btn btn-primary" (click)="exibePerfil()" style="margin-right: 10px;"> Exibir </a>
+    <a href=card-perfil.component.ts class="btn btn-primary" (click)="ocultaPerfil()"> Ocultar </a>
+  
+  </div>
+
+  <div *ngIf = "exibe" class = "card" style="width: 100%;">
+    <div class="card-header">
+      <h3>Perfil</h3>
+      <img [src]="imagem" alt = "Avatar" style="width:20%;">
+    </div>
+    <div class= "card-body">
+      <h4 class="card-title">{{usuario}}</h4>
+      <p>Profissão : {{profissao}}</p>
+      <p class="card-text">{{descricao}}</p>
+   
+    </div>
+  
+  </div>
+  
+</div>
