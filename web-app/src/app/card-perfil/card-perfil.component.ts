@@ -1,3 +1,4 @@
+import { createTokenForExternalReference } from '@angular/compiler/src/identifiers';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -13,19 +14,44 @@ public descricao = 'Disciplina de Programação';
 public usuario = 'Thiago Gambati';
 public profissao = 'Estagiário';
 
+public lista = [
+
+{
+  id: '1',
+  year: '2007',
+  cert: 'SCJP 1.5'
+},
+
+{
+  id: '2',
+  year: '2009',
+  cert: 'SCWCD 1.5'
+},
+
+{
+  id: '3',
+  year: '2011',
+  cert: 'CTFL'
+},
+
+];
+
 public buttons = {
   show: 'Exibir',
-  hide: 'Ocultar'
-}
+  hide: 'Ocultar',
+};
+
   constructor() { }
 
   ngOnInit(): void {}
+
 
 
 // tslint:disable-next-line:typedef
 public exibePerfil(){
     this.exibe = true;
   }
+
 
 // tslint:disable-next-line:typedef
 public ocultaPerfil(){
