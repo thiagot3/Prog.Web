@@ -1,0 +1,28 @@
+<form (NgSubmit)="onSubmit(f)" #f="ngForm">
+    <div class='Calculadora'>
+        <div class="Operation">Operação: 
+            <select name= 'operation'>
+                <option value ="add">Adição</option>
+                <option value ="subtract">Subtração</option>
+                <option value ="divide">Divisão</option>
+                <option value ="multiply">Multiplicação</option>
+            </select>
+        </div>
+        <div class="Operandos"> Operandos:   
+            
+            
+                <input type="text" id= "num1" name="num1" ngModel required style="width: 50px; margin: 5px;" >
+                <input type="text" id= "num2" name="num2" ngModel required style="width: 50px; margin: 5px;">
+                
+                <button class="btn btn-primary"type="submit" value = "Enviar" [disabled]="f.form.invalid">Enviar</button>
+            
+        </div>
+            
+            
+        
+        <div class="Resultado">
+            <label for="result">Resultado:</label>
+            <input type="text" id= "result" value="num1()" style="width: 100px; margin: 5px; ">
+        </div>
+    </div>
+</form>
